@@ -252,24 +252,33 @@ export const portfolioData: PortfolioData = {
         "Interactive order summaries, responsive catalog display, and instant quantity modifiers"
       ]
     },
+
     {
-      id: "attendancemanagement",
-      title: "Attendance Management",
-      subtitle: "Python & Tkinter Desktop Application",
-      description: "Python application for managing attendance, built with object-oriented programming and Tkinter.",
-      technologies: ["Python", "Tkinter GUI", "POO", "Data Persistence", "Desktop App"],
+      id: "customer-craft",
+      title: "Customer Craft",
+      subtitle: "Customer Relationship Management (CRM)",
+      description:
+        "A CRM application designed to help manage customers and prospects, organize client information, and streamline customer relationship management workflows.",
+      technologies: [
+        "React",
+        "JavaScript",
+        "CRM",
+        "Git/GitHub"
+      ],
       featured: true,
       category: "fullstack",
-      image: "/projects/attendancemanagement.svg",
-      imageAlt: "Attendance Management Python Tkinter GUI preview",
-      demoUrl: "https://github.com/houda-z/attendance-management",
-      githubUrl: "https://github.com/houda-z/attendance-management",
+      image: "/projects/customer-craft.svg",
+      imageAlt: "Customer Craft CRM application preview",
+      demoUrl: "https://github.com/houda-z/CRM-Hub",
+      githubUrl: "https://github.com/houda-z/CRM-Hub.git",
       highlights: [
-        "Desktop graphical user interface developed with Python and Tkinter for user interactions",
-        "Object-oriented architecture modeling student records, classes, and sessions",
-        "Automated attendance recording, status filtering, and log generation"
+        "Developed a CRM application focused on customer and prospect management",
+        "Organized customer information to support efficient lead tracking and management",
+        "Worked on frontend functionality and user interface development",
+        "Applied version control practices during project development"
       ]
     }
+
   ],
 
   experienceSubtitle: "My academic background in Digital Development, hands-on internship experience, and practical projects have helped me build a foundation in Full Stack Web Development.",
@@ -284,7 +293,7 @@ export const portfolioData: PortfolioData = {
       period: "2024 – 2026",
       location: "Marrakech, Morocco",
       description: "Completed a two-year vocational training program focused on web development, programming, databases, and software development.",
-      technologies: ["HTML5", "CSS3", "JavaScript", "React.js", "PHP", "SQL", "Node.js", "Git"],
+      technologies: [],
       highlights: [
         "Learned frontend and backend web development fundamentals.",
         "Practiced object-oriented programming, database management, and application architecture.",
@@ -300,7 +309,7 @@ export const portfolioData: PortfolioData = {
       period: "March 2026 – 1 month",
       location: "Marrakech, Morocco",
       description: "Completed a one-month internship in web development, working on a CRM application designed to manage clients and prospects.",
-      technologies: ["React", "JavaScript", "PHP", "SQL", "Git"],
+      technologies: ["React", "JavaScript", "PHP", "SQL", "Git/GitHub"],
       highlights: [
         "Developed features for a customer and prospect management application.",
         "Worked on both frontend and backend functionality.",
@@ -316,13 +325,31 @@ export const portfolioData: PortfolioData = {
       period: "2024 – Present",
       location: "Marrakech, Morocco",
       description: "Built practical projects to strengthen my programming skills and apply the concepts learned during my training.",
-      technologies: ["React", "Laravel", "TypeScript", "JavaScript", "PHP", "Python", "SQL", "Bootstrap", "Git/GitHub"],
+
+      technologies: [
+        "React",
+        "Laravel",
+        "TypeScript",
+        "JavaScript",
+        "PHP",
+        "Python",
+        "Tkinter",
+        "SQL",
+        "HTML5",
+        "CSS3",
+        "Bootstrap 5",
+        "MVC Architecture",
+        "Jasmine",
+        "REST APIs",
+        "Git/GitHub"
+      ],
       highlights: [
-        "QuickCart: E-commerce application developed using PHP, object-oriented programming, MVC architecture, and SQL.",
-        "Amazon Style: E-commerce interface with shopping cart functionality using JavaScript and object-oriented programming, with Jasmine tests.",
-        "Attendance Management: Python application for managing attendance, built with object-oriented programming and Tkinter.",
-        "EduTrack: Academic project focused on educational management, developed collaboratively."
+        "EduTrack: Collaborative academic management application built with React, Laravel, TypeScript, Bootstrap 5, and REST APIs.",
+        "QuickCart: E-commerce application developed with PHP, object-oriented programming, MVC architecture, and SQL.",
+        "Amazon Style: Interactive e-commerce application with JavaScript, object-oriented programming, and Jasmine unit tests.",
+        "Customer Craft: CRM application focused on customer and prospect management, developed with React and JavaScript."
       ]
+
     }
   ],
 
