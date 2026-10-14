@@ -1,0 +1,105 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="qcBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B263B"/>
+      <stop offset="100%" stop-color="#111A29"/>
+    </linearGradient>
+    <linearGradient id="prodCardGrad" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24344E"/>
+      <stop offset="100%" stop-color="#1C283E"/>
+    </linearGradient>
+    <linearGradient id="accentQC" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#6F86BC"/>
+      <stop offset="100%" stop-color="#94A8D0"/>
+    </linearGradient>
+    <filter id="qcShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#F5F1E9"/>
+
+  <rect x="30" y="30" width="740" height="440" rx="16" fill="url(#qcBg)" filter="url(#qcShadow)"/>
+
+  <!-- Top Store Navbar -->
+  <rect x="30" y="30" width="740" height="60" rx="16" fill="#141E2D"/>
+  <circle cx="55" cy="60" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="60" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="60" r="5" fill="#10B981"/>
+
+  <text x="120" y="66" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="17">⚡ QuickCart <tspan fill="#94A8D0" font-size="12" font-weight="400">Store</tspan></text>
+  <rect x="380" y="46" width="230" height="28" rx="14" fill="#202D42"/>
+  <text x="400" y="65" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="12">Search smart devices, audio...</text>
+  
+  <!-- Cart Pill -->
+  <rect x="630" y="46" width="120" height="28" rx="14" fill="url(#accentQC)"/>
+  <text x="645" y="65" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">🛒 Cart (3) • $289</text>
+
+  <!-- Categories Pill Bar -->
+  <g transform="translate(50, 105)">
+    <rect x="0" y="0" width="75" height="26" rx="13" fill="#6F86BC"/>
+    <text x="18" y="18" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">All Items</text>
+
+    <rect x="85" y="0" width="90" height="26" rx="13" fill="#202D42"/>
+    <text x="100" y="18" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">🎧 Audio Tech</text>
+
+    <rect x="185" y="0" width="105" height="26" rx="13" fill="#202D42"/>
+    <text x="200" y="18" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">⌚ Smart Wear</text>
+
+    <rect x="300" y="0" width="100" height="26" rx="13" fill="#202D42"/>
+    <text x="315" y="18" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">💻 Accessories</text>
+
+    <text x="590" y="18" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">Showing 24 of 88 products</text>
+  </g>
+
+  <!-- Product Grid: 3 Featured Cards -->
+  <g transform="translate(50, 145)">
+    <!-- Product 1 -->
+    <rect x="0" y="0" width="220" height="305" rx="12" fill="url(#prodCardGrad)" stroke="#2B3D5A" stroke-width="1"/>
+    <!-- Image placeholder area -->
+    <rect x="12" y="12" width="196" height="150" rx="8" fill="#162234"/>
+    <circle cx="110" cy="85" r="42" fill="#273956"/>
+    <!-- Headphone Icon Representation -->
+    <path d="M 90 90 A 20 20 0 0 1 130 90 L 130 100 A 6 6 0 0 1 120 105 L 120 88 A 12 12 0 0 0 100 88 L 100 105 A 6 6 0 0 1 90 100 Z" fill="#94A8D0"/>
+    <text x="110" y="125" text-anchor="middle" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="10">Noise-Canceling ANC</text>
+    <rect x="22" y="22" width="45" height="20" rx="4" fill="#10B981"/>
+    <text x="31" y="36" fill="#FFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">-20%</text>
+
+    <text x="16" y="185" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">Wireless Studio Pro</text>
+    <text x="16" y="202" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">High-Fidelity Audio • 40h Battery</text>
+    <text x="16" y="235" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="18">$159.00 <tspan fill="#8898B3" font-size="12" text-decoration="line-through">$199</tspan></text>
+    <rect x="16" y="255" width="188" height="34" rx="8" fill="url(#accentQC)"/>
+    <text x="75" y="277" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">+ Add To Cart</text>
+
+    <!-- Product 2 -->
+    <rect x="240" y="0" width="220" height="305" rx="12" fill="url(#prodCardGrad)" stroke="#2B3D5A" stroke-width="1"/>
+    <rect x="252" y="12" width="196" height="150" rx="8" fill="#162234"/>
+    <circle cx="350" cy="85" r="42" fill="#273956"/>
+    <!-- Watch Icon Representation -->
+    <rect x="338" y="60" width="24" height="50" rx="8" fill="#94A8D0"/>
+    <circle cx="350" cy="85" r="14" fill="#1B263B"/>
+    <text x="350" y="125" text-anchor="middle" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="10">OLED Touch Fitness</text>
+
+    <text x="256" y="185" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">Smart Pulse Watch v3</text>
+    <text x="256" y="202" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">Heart Rate • GPS • Waterproof</text>
+    <text x="256" y="235" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="18">$89.99</text>
+    <rect x="256" y="255" width="188" height="34" rx="8" fill="url(#accentQC)"/>
+    <text x="315" y="277" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">+ Add To Cart</text>
+
+    <!-- Product 3 -->
+    <rect x="480" y="0" width="220" height="305" rx="12" fill="url(#prodCardGrad)" stroke="#2B3D5A" stroke-width="1"/>
+    <rect x="492" y="12" width="196" height="150" rx="8" fill="#162234"/>
+    <circle cx="590" cy="85" r="42" fill="#273956"/>
+    <!-- Keyboard/Desk Representation -->
+    <rect x="568" y="75" width="44" height="24" rx="4" fill="#94A8D0"/>
+    <text x="590" y="125" text-anchor="middle" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="10">Mechanical RGB</text>
+    <rect x="502" y="22" width="55" height="20" rx="4" fill="#6F86BC"/>
+    <text x="510" y="36" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">POPULAR</text>
+
+    <text x="496" y="185" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="14">Aura Wireless Keyboard</text>
+    <text x="496" y="202" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">Hot-swappable • Low Latency</text>
+    <text x="496" y="235" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="18">$119.50</text>
+    <rect x="496" y="255" width="188" height="34" rx="8" fill="url(#accentQC)"/>
+    <text x="555" y="277" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">+ Add To Cart</text>
+  </g>
+</svg>

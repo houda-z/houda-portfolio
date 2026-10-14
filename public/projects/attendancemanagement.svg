@@ -1,0 +1,136 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500" width="100%" height="100%">
+  <defs>
+    <linearGradient id="attBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1B263B"/>
+      <stop offset="100%" stop-color="#0E1626"/>
+    </linearGradient>
+    <linearGradient id="attCard" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24344E"/>
+      <stop offset="100%" stop-color="#1C273C"/>
+    </linearGradient>
+    <linearGradient id="pythonBlue" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#387EB8"/>
+      <stop offset="100%" stop-color="#4B8BBE"/>
+    </linearGradient>
+    <linearGradient id="pythonYellow" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#FFE873"/>
+      <stop offset="100%" stop-color="#FFD43B"/>
+    </linearGradient>
+    <linearGradient id="greenTag" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#10B981"/>
+      <stop offset="100%" stop-color="#34D399"/>
+    </linearGradient>
+    <filter id="winShadow" x="-5%" y="-5%" width="110%" height="110%">
+      <feDropShadow dx="0" dy="6" stdDeviation="8" flood-color="#000" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="500" fill="#F5F1E9"/>
+
+  <!-- Main Window -->
+  <rect x="30" y="30" width="740" height="440" rx="16" fill="url(#attBg)" filter="url(#winShadow)"/>
+
+  <!-- Desktop App Title Bar (Tkinter style) -->
+  <rect x="30" y="30" width="740" height="52" rx="16" fill="#141E2F"/>
+  <!-- Window buttons -->
+  <circle cx="55" cy="56" r="5" fill="#EF4444"/>
+  <circle cx="72" cy="56" r="5" fill="#F59E0B"/>
+  <circle cx="89" cy="56" r="5" fill="#10B981"/>
+
+  <!-- App Title with Python Badge -->
+  <text x="120" y="61" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="15">Attendance Management <tspan fill="#FFD43B" font-weight="600" font-size="12">[Tkinter GUI • Python OOP]</tspan></text>
+  
+  <rect x="580" y="42" width="170" height="28" rx="6" fill="#202E44"/>
+  <text x="596" y="60" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="11">📅 2026-10-14 • Session 2</text>
+
+  <!-- Left Side: Student Roster Grid -->
+  <g transform="translate(50, 100)">
+    <!-- Control Bar -->
+    <rect x="0" y="0" width="410" height="40" rx="8" fill="#182337" stroke="#253752" stroke-width="1"/>
+    <text x="15" y="25" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="12">Class: Digital Dev — Full Stack</text>
+    <rect x="290" y="7" width="105" height="26" rx="6" fill="url(#pythonBlue)"/>
+    <text x="305" y="24" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">+ Add Student</text>
+
+    <!-- Table Header -->
+    <rect x="0" y="50" width="410" height="28" rx="4" fill="#202E44"/>
+    <text x="15" y="69" fill="#94A8D0" font-family="'Outfit', sans-serif" font-weight="600" font-size="10">STUDENT NAME</text>
+    <text x="180" y="69" fill="#94A8D0" font-family="'Outfit', sans-serif" font-weight="600" font-size="10">ID</text>
+    <text x="250" y="69" fill="#94A8D0" font-family="'Outfit', sans-serif" font-weight="600" font-size="10">STATUS</text>
+    <text x="345" y="69" fill="#94A8D0" font-family="'Outfit', sans-serif" font-weight="600" font-size="10">ACTION</text>
+
+    <!-- Row 1 -->
+    <rect x="0" y="86" width="410" height="44" rx="6" fill="#151F30"/>
+    <circle cx="25" cy="108" r="10" fill="#387EB8"/>
+    <text x="21" y="112" fill="#FFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="9">HZ</text>
+    <text x="45" y="113" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="600" font-size="12">Houda Zitouni</text>
+    <text x="180" y="113" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">#ST-2024</text>
+    <rect x="245" y="96" width="65" height="22" rx="11" fill="url(#greenTag)"/>
+    <text x="257" y="111" fill="#0D3522" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">Present</text>
+    <text x="350" y="113" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="12">✏️  🗑️</text>
+
+    <!-- Row 2 -->
+    <rect x="0" y="138" width="410" height="44" rx="6" fill="#182337"/>
+    <circle cx="25" cy="160" r="10" fill="#4B8BBE"/>
+    <text x="21" y="164" fill="#FFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="9">AM</text>
+    <text x="45" y="165" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="600" font-size="12">Amine Mansouri</text>
+    <text x="180" y="165" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">#ST-2025</text>
+    <rect x="245" y="148" width="65" height="22" rx="11" fill="url(#greenTag)"/>
+    <text x="257" y="163" fill="#0D3522" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">Present</text>
+    <text x="350" y="165" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="12">✏️  🗑️</text>
+
+    <!-- Row 3 -->
+    <rect x="0" y="190" width="410" height="44" rx="6" fill="#151F30"/>
+    <circle cx="25" cy="212" r="10" fill="#3B4D73"/>
+    <text x="21" y="216" fill="#FFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="9">SE</text>
+    <text x="45" y="217" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="600" font-size="12">Sara El Amrani</text>
+    <text x="180" y="217" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">#ST-2026</text>
+    <rect x="245" y="200" width="65" height="22" rx="11" fill="#F59E0B"/>
+    <text x="264" y="215" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">Late</text>
+    <text x="350" y="217" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="12">✏️  🗑️</text>
+
+    <!-- Row 4 -->
+    <rect x="0" y="242" width="410" height="44" rx="6" fill="#182337"/>
+    <circle cx="25" cy="264" r="10" fill="#243352"/>
+    <text x="21" y="268" fill="#FFF" font-family="'Outfit', sans-serif" font-weight="700" font-size="9">YB</text>
+    <text x="45" y="269" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="600" font-size="12">Youssef Bennani</text>
+    <text x="180" y="269" fill="#8898B3" font-family="'Outfit', sans-serif" font-size="11">#ST-2027</text>
+    <rect x="245" y="252" width="65" height="22" rx="11" fill="url(#greenTag)"/>
+    <text x="257" y="267" fill="#0D3522" font-family="'Outfit', sans-serif" font-weight="700" font-size="10">Present</text>
+    <text x="350" y="269" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="12">✏️  🗑️</text>
+
+    <!-- Table Footer / Quick Stats -->
+    <rect x="0" y="296" width="410" height="38" rx="6" fill="#202E44"/>
+    <text x="15" y="320" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="11">Total: 28 Students • Present: 26 • Absent: 1 • Late: 1</text>
+  </g>
+
+  <!-- Right Side: OOP Architecture & Analytics Panel -->
+  <g transform="translate(480, 100)">
+    <!-- Top Stat Card -->
+    <rect x="0" y="0" width="260" height="100" rx="10" fill="url(#attCard)" stroke="#2D3F63" stroke-width="1"/>
+    <text x="16" y="24" fill="#94A8D0" font-family="'Outfit', sans-serif" font-size="11">Today's Attendance Rate</text>
+    <text x="16" y="60" fill="#FFFFFF" font-family="'Outfit', sans-serif" font-weight="800" font-size="30">96.4%</text>
+    <rect x="16" y="74" width="228" height="8" rx="4" fill="#162234"/>
+    <rect x="16" y="74" width="220" height="8" rx="4" fill="url(#greenTag)"/>
+
+    <!-- Python OOP Class Structure Overview -->
+    <rect x="0" y="115" width="260" height="150" rx="10" fill="#131D2D" stroke="#253752" stroke-width="1"/>
+    <text x="16" y="136" fill="#FFD43B" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">🐍 Python OOP Architecture</text>
+
+    <g transform="translate(16, 148)">
+      <text x="0" y="14" fill="#94A8D0" font-family="'Courier New', monospace" font-size="11"><tspan fill="#387EB8">class</tspan> Student:</text>
+      <text x="12" y="28" fill="#8898B3" font-family="'Courier New', monospace" font-size="10">id, name, status, history</text>
+      <text x="0" y="48" fill="#94A8D0" font-family="'Courier New', monospace" font-size="11"><tspan fill="#387EB8">class</tspan> AttendanceManager:</text>
+      <text x="12" y="62" fill="#8898B3" font-family="'Courier New', monospace" font-size="10">mark_attendance(id, status)</text>
+      <text x="12" y="76" fill="#8898B3" font-family="'Courier New', monospace" font-size="10">export_report(format="csv")</text>
+    </g>
+
+    <!-- Export Action Buttons -->
+    <g transform="translate(0, 280)">
+      <rect x="0" y="0" width="124" height="42" rx="8" fill="url(#pythonYellow)"/>
+      <text x="24" y="26" fill="#1B263B" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">📥 Export CSV</text>
+
+      <rect x="136" y="0" width="124" height="42" rx="8" fill="#202E44" stroke="#2D3F63" stroke-width="1"/>
+      <text x="156" y="26" fill="#E2E8F0" font-family="'Outfit', sans-serif" font-weight="700" font-size="11">📊 View Logs</text>
+    </g>
+  </g>
+</svg>
