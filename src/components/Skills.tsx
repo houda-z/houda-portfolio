@@ -1,17 +1,18 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 import DotGrid from './common/DotGrid';
 
 export const Skills: React.FC = () => {
+  const { portfolioData, t } = useLanguage();
   const { skillsOverview, skillCategories } = portfolioData;
 
   const visualThumbnails = [
-    { label: 'React UI', icon: 'bi-filetype-jsx' },
-    { label: 'TypeScript', icon: 'bi-filetype-tsx' },
-    { label: 'Node.js', icon: 'bi-hdd-network' },
-    { label: 'PHP & APIs', icon: 'bi-diagram-3' },
-    { label: 'SQL DBs', icon: 'bi-database' },
-    { label: 'Git Workflow', icon: 'bi-git' },
+    { label: t.skills.visualLabels.reactUi, icon: 'bi-filetype-jsx' },
+    { label: t.skills.visualLabels.typescript, icon: 'bi-filetype-tsx' },
+    { label: t.skills.visualLabels.nodejs, icon: 'bi-hdd-network' },
+    { label: t.skills.visualLabels.phpApis, icon: 'bi-diagram-3' },
+    { label: t.skills.visualLabels.sqlDbs, icon: 'bi-database' },
+    { label: t.skills.visualLabels.gitWorkflow, icon: 'bi-git' },
   ];
 
   return (
@@ -24,14 +25,14 @@ export const Skills: React.FC = () => {
       <div className="container position-relative">
         {/* Section Heading */}
         <div className="section-header">
-          <h2 className="skills-main-title">Skills</h2>
+          <h2 className="skills-main-title">{t.skills.sectionTitle}</h2>
           <p className="section-subtitle">
-            Core competencies across frontend development, backend logic, relational database systems, and modern collaborative tooling.
+            {t.skills.sectionSubtitle}
           </p>
         </div>
 
         {/* Numbered Pill Ribbon Banners from Reference Image 3 */}
-        <div className="skills-pill-ribbon-wrapper mb-5" aria-label="Core Skill Highlights">
+        <div className="skills-pill-ribbon-wrapper mb-5" aria-label={t.skills.coreHighlightsAria}>
           {/* Row 1: 1, 2, 3 */}
           <div className="skills-pill-row">
             {skillsOverview.slice(0, 3).map((item) => (

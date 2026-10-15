@@ -1,7 +1,9 @@
 import React from 'react';
-import { portfolioData, type ExperienceItem } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
+import type { ExperienceItem } from '../data/portfolio';
 
 export const Experience: React.FC = () => {
+  const { portfolioData, t } = useLanguage();
   const { experience, experienceSubtitle } = portfolioData;
 
   const getBadgeClass = (type: ExperienceItem['type']) => {
@@ -35,9 +37,9 @@ export const Experience: React.FC = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header">
-          <h2 className="section-title">Experience &amp; Education</h2>
+          <h2 className="section-title">{t.experience.sectionTitle}</h2>
           <p className="section-subtitle">
-            {experienceSubtitle || "My academic background in Digital Development, hands-on internship experience, and practical projects have helped me build a foundation in Full Stack Web Development."}
+            {experienceSubtitle || t.experience.sectionSubtitle}
           </p>
         </div>
 

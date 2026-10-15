@@ -1,9 +1,10 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 const CURRENT_YEAR = new Date().getFullYear();
 
 export const Footer: React.FC = () => {
+  const { portfolioData, t } = useLanguage();
   const { personal } = portfolioData;
 
   const scrollToTop = () => {
@@ -11,13 +12,13 @@ export const Footer: React.FC = () => {
   };
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
+    { label: t.nav.home, href: '#home' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.contact, href: '#contact' },
   ];
 
   return (
@@ -31,7 +32,7 @@ export const Footer: React.FC = () => {
               <span>{personal.name}</span>
             </a>
             <p className="footer-tagline">
-              {personal.role} focused on modern frontend engineering, backend REST endpoints, and accessible digital solutions.
+              {personal.role} {t.footer.footerBio}
             </p>
             <div className="text-light small opacity-75">
               <i className="bi bi-geo-alt me-1"></i>
@@ -41,7 +42,7 @@ export const Footer: React.FC = () => {
 
           {/* Column 2: Navigation Links */}
           <div className="col-lg-3 col-sm-6">
-            <h4 className="footer-nav-title">Quick Links</h4>
+            <h4 className="footer-nav-title">{t.footer.quickLinks}</h4>
             <ul className="footer-nav-list">
               {navLinks.map((link) => (
                 <li key={link.href}>
@@ -55,9 +56,9 @@ export const Footer: React.FC = () => {
 
           {/* Column 3: Connect & Socials */}
           <div className="col-lg-4 col-sm-6">
-            <h4 className="footer-nav-title">Connect &amp; Social</h4>
+            <h4 className="footer-nav-title">{t.footer.connectSocial}</h4>
             <p className="small text-light opacity-75 mb-3">
-              Explore my code repositories or reach out for professional inquiries.
+              {t.footer.socialTagline}
             </p>
             <div className="footer-social-row mb-4">
               <a
@@ -96,7 +97,7 @@ export const Footer: React.FC = () => {
               aria-label="Scroll back to top of the page"
             >
               <i className="bi bi-arrow-up"></i>
-              <span>Back to Top</span>
+              <span>{t.footer.backToTop}</span>
             </button>
           </div>
         </div>
@@ -104,10 +105,10 @@ export const Footer: React.FC = () => {
         {/* Bottom Copyright Strip */}
         <div className="footer-bottom-bar">
           <div>
-            &copy; {CURRENT_YEAR} {personal.name}. All rights reserved. Built with React, TypeScript &amp; Bootstrap 5.
+            &copy; {CURRENT_YEAR} {personal.name}. {t.footer.copyright}
           </div>
           <div>
-            <span>Designed with precision &amp; modern web standards.</span>
+            <span>{t.footer.standardsTagline}</span>
           </div>
         </div>
       </div>

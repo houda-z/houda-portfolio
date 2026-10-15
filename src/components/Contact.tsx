@@ -1,7 +1,8 @@
 import React from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 
 export const Contact: React.FC = () => {
+  const { portfolioData, t } = useLanguage();
   const { personal } = portfolioData;
 
   return (
@@ -9,9 +10,9 @@ export const Contact: React.FC = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center mx-auto" style={{ maxWidth: '680px' }}>
-          <h2 className="section-title">Let's Connect &amp; Collaborate</h2>
+          <h2 className="section-title">{t.contact.sectionTitle}</h2>
           <p className="section-subtitle mx-auto">
-            Whether you have an internship opportunity, a junior developer role, or a project in mind, my inbox is always open.
+            {t.contact.sectionSubtitle}
           </p>
         </div>
 
@@ -19,7 +20,7 @@ export const Contact: React.FC = () => {
         <div className="row justify-content-center">
           <div className="col-lg-6 col-md-8">
             <div className="contact-card-info">
-              <h3 className="h4 fw-bold text-dark mb-4 text-center">Contact Information</h3>
+              <h3 className="h4 fw-bold text-dark mb-4 text-center">{t.contact.cardTitle}</h3>
 
               {/* Email */}
               <a href={`mailto:${personal.email}`} className="contact-method-item">
@@ -27,7 +28,7 @@ export const Contact: React.FC = () => {
                   <i className="bi bi-envelope-at"></i>
                 </div>
                 <div>
-                  <div className="contact-method-label">Direct Email</div>
+                  <div className="contact-method-label">{t.contact.directEmail}</div>
                   <div className="contact-method-value">{personal.email}</div>
                 </div>
               </a>
@@ -38,7 +39,7 @@ export const Contact: React.FC = () => {
                   <i className="bi bi-geo-alt"></i>
                 </div>
                 <div>
-                  <div className="contact-method-label">Location</div>
+                  <div className="contact-method-label">{t.contact.location}</div>
                   <div className="contact-method-value">{personal.location}</div>
                 </div>
               </div>

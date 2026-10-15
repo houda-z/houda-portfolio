@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 import DotGrid from './common/DotGrid';
 
 export const About: React.FC = () => {
   const [imageError, setImageError] = useState(false);
+  const { portfolioData, t } = useLanguage();
   const { personal } = portfolioData;
 
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -15,7 +16,7 @@ export const About: React.FC = () => {
   };
 
   return (
-    <section id="about" className="portfolio-section about-section" aria-label="About Houda Zitouni">
+    <section id="about" className="portfolio-section about-section" aria-label={`About ${personal.name}`}>
       {/* Decorative Dot Matrix Grids from Reference Image 2 */}
       <div className="about-dot-top-right d-none d-lg-block" aria-hidden="true">
         <DotGrid rows={4} cols={4} dotSize={8} gap={14} color="#1B263B" />
@@ -28,7 +29,7 @@ export const About: React.FC = () => {
         <div className="row align-items-center g-5">
           {/* Left Column: Biography Content */}
           <div className="col-lg-7 about-text-content">
-            <h2 className="about-main-title">About me</h2>
+            <h2 className="about-main-title">{t.about.sectionTitle}</h2>
 
             <p className="about-lead-p">
               {personal.aboutParagraphs[0]}
@@ -44,9 +45,9 @@ export const About: React.FC = () => {
                 <div className="about-card-stat">
                   <div className="about-stat-number">
                     <i className="bi bi-mortarboard text-primary me-1"></i>
-                    Diploma
+                    {t.about.statDiplomaNum}
                   </div>
-                  <div className="about-stat-label">Digital Development (Full Stack)</div>
+                  <div className="about-stat-label">{t.about.statDiplomaLabel}</div>
                 </div>
               </div>
 
@@ -54,9 +55,9 @@ export const About: React.FC = () => {
                 <div className="about-card-stat">
                   <div className="about-stat-number">
                     <i className="bi bi-layers text-primary me-1"></i>
-                    Full Stack
+                    {t.about.statFullStackNum}
                   </div>
-                  <div className="about-stat-label">Frontend &amp; Backend integration</div>
+                  <div className="about-stat-label">{t.about.statFullStackLabel}</div>
                 </div>
               </div>
 
@@ -64,9 +65,9 @@ export const About: React.FC = () => {
                 <div className="about-card-stat">
                   <div className="about-stat-number">
                     <i className="bi bi-code-slash text-primary me-1"></i>
-                    Clean Code
+                    {t.about.statCleanCodeNum}
                   </div>
-                  <div className="about-stat-label">Modern TypeScript &amp; standards</div>
+                  <div className="about-stat-label">{t.about.statCleanCodeLabel}</div>
                 </div>
               </div>
             </div>
@@ -78,7 +79,7 @@ export const About: React.FC = () => {
                 onClick={scrollToContact}
                 className="btn-navy"
               >
-                <span>Get in Touch</span>
+                <span>{t.about.getInTouch}</span>
                 <i className="bi bi-arrow-right btn-icon" aria-hidden="true"></i>
               </a>
 
@@ -89,7 +90,7 @@ export const About: React.FC = () => {
                 className="btn-navy-outline"
               >
                 <i className="bi bi-github me-1" aria-hidden="true"></i>
-                <span>Explore GitHub</span>
+                <span>{t.about.exploreGithub}</span>
               </a>
             </div>
           </div>
@@ -100,7 +101,7 @@ export const About: React.FC = () => {
               {!imageError ? (
                 <img
                   src={personal.profileImage}
-                  alt={`Portrait of ${personal.name}`}
+                  alt={t.hero.portraitAlt}
                   className="about-portrait-img"
                   onError={() => setImageError(true)}
                   loading="lazy"

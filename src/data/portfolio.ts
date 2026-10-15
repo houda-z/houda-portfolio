@@ -309,7 +309,7 @@ export const portfolioData: PortfolioData = {
       period: "March 2026 – 1 month",
       location: "Marrakech, Morocco",
       description: "Completed a one-month internship in web development, working on a CRM application designed to manage clients and prospects.",
-      technologies: ["React", "JavaScript", "PHP", "SQL", "Git/GitHub"],
+      technologies: ["React", "JavaScript", "PHP", "SQL", "Git", "GitHub"],
       highlights: [
         "Developed features for a customer and prospect management application.",
         "Worked on both frontend and backend functionality.",
@@ -341,7 +341,8 @@ export const portfolioData: PortfolioData = {
         "MVC Architecture",
         "Jasmine",
         "REST APIs",
-        "Git/GitHub"
+        "Git",
+        "GitHub"
       ],
       highlights: [
         "EduTrack: Collaborative academic management application built with React, Laravel, TypeScript, Bootstrap 5, and REST APIs.",

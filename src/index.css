@@ -1523,3 +1523,141 @@ h1, h2, h3, h4, h5, h6 {
     scroll-behavior: auto !important;
   }
 }
+
+/* ==========================================================================
+   LANGUAGE SWITCHER
+   ========================================================================== */
+.lang-switcher-pill-group {
+  display: inline-flex;
+  align-items: center;
+  background-color: rgba(27, 38, 59, 0.07);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-pill);
+  padding: 3px;
+  gap: 2px;
+}
+
+.lang-switcher-btn {
+  background: transparent;
+  border: none;
+  color: var(--navy-800);
+  font-family: var(--font-main);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  padding: 4px 10px;
+  border-radius: var(--radius-pill);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  line-height: 1.2;
+}
+
+.lang-switcher-btn:hover {
+  background-color: rgba(27, 38, 59, 0.1);
+  color: var(--navy-800);
+}
+
+.lang-switcher-btn.active {
+  background-color: var(--navy-800);
+  color: #FFFFFF;
+  box-shadow: 0 2px 6px rgba(27, 38, 59, 0.18);
+}
+
+.lang-switcher-btn:focus-visible {
+  outline: 2px solid var(--navy-500);
+  outline-offset: 1px;
+}
+
+/* ==========================================================================
+   ARABIC & RIGHT-TO-LEFT (RTL) SUPPORT
+   ========================================================================== */
+html[dir="rtl"] body {
+  font-family: 'Outfit', 'Segoe UI', Tahoma, Arial, sans-serif;
+  text-align: right;
+}
+
+html[dir="rtl"] .skip-link {
+  left: auto;
+  right: 20px;
+}
+
+/* RTL Icon mirroring for directional indicators only */
+html[dir="rtl"] .bi-arrow-right,
+html[dir="rtl"] .bi-arrow-up-right,
+html[dir="rtl"] .bi-arrow-down-right {
+  transform: scaleX(-1);
+  display: inline-block;
+}
+
+/* Margin and spacing adjustments for RTL */
+html[dir="rtl"] .me-1 {
+  margin-right: 0 !important;
+  margin-left: 0.25rem !important;
+}
+
+html[dir="rtl"] .me-2 {
+  margin-right: 0 !important;
+  margin-left: 0.5rem !important;
+}
+
+html[dir="rtl"] .ms-1 {
+  margin-left: 0 !important;
+  margin-right: 0.25rem !important;
+}
+
+html[dir="rtl"] .ms-2 {
+  margin-left: 0 !important;
+  margin-right: 0.5rem !important;
+}
+
+/* Hero Section RTL adjustments */
+html[dir="rtl"] .hero-contact-info {
+  text-align: left;
+}
+
+html[dir="rtl"] .btn-navy:hover .btn-icon,
+html[dir="rtl"] .btn-navy-outline:hover .btn-icon {
+  transform: translateX(-3px);
+}
+
+/* Skills Section RTL adjustments */
+html[dir="rtl"] .pill-huge-number {
+  margin-right: 0;
+  margin-left: 12px;
+}
+
+/* Projects Section RTL adjustments */
+html[dir="rtl"] .project-category-badge {
+  left: auto;
+  right: 14px;
+}
+
+/* Timeline RTL adjustments */
+html[dir="rtl"] .timeline-container {
+  padding-left: 0;
+  padding-right: 28px;
+}
+
+html[dir="rtl"] .timeline-container::before {
+  left: auto;
+  right: 10px;
+}
+
+html[dir="rtl"] .timeline-node {
+  left: auto;
+  right: -28px;
+}
+
+html[dir="rtl"] .timeline-card:hover {
+  transform: translateX(-4px);
+}
+
+html[dir="rtl"] .timeline-highlights-list {
+  padding-left: 0;
+  padding-right: 20px;
+}
+
+/* Contact Section RTL adjustments */
+html[dir="rtl"] .contact-method-item:hover {
+  transform: translateX(-4px);
+}

@@ -1,19 +1,21 @@
 import React, { useState, useEffect } from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export const Navbar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeSection, setActiveSection] = useState('home');
+  const { portfolioData, t } = useLanguage();
 
   const navLinks = [
-    { label: 'Home', href: '#home' },
-    { label: 'About', href: '#about' },
-    { label: 'Skills', href: '#skills' },
-    { label: 'Projects', href: '#projects' },
-    { label: 'Experience', href: '#experience' },
-    { label: 'Services', href: '#services' },
-    { label: 'Contact', href: '#contact' },
+    { label: t.nav.home, href: '#home' },
+    { label: t.nav.about, href: '#about' },
+    { label: t.nav.skills, href: '#skills' },
+    { label: t.nav.projects, href: '#projects' },
+    { label: t.nav.experience, href: '#experience' },
+    { label: t.nav.services, href: '#services' },
+    { label: t.nav.contact, href: '#contact' },
   ];
 
   useEffect(() => {
@@ -74,28 +76,32 @@ export const Navbar: React.FC = () => {
           ))}
         </div>
 
-        {/* Desktop CTA Button */}
-        <div className="d-none d-lg-block">
+        {/* Desktop CTA Button & Language Switcher */}
+        <div className="d-none d-lg-flex align-items-center gap-3">
+          <LanguageSwitcher />
           <a
             href="#contact"
             onClick={(e) => handleLinkClick(e, '#contact')}
             className="nav-cta-btn"
           >
-            <span>Let's Talk</span>
+            <span>{t.nav.letsTalk}</span>
             <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
           </a>
         </div>
 
-        {/* Mobile Toggle Button */}
-        <button
-          type="button"
-          className="mobile-nav-toggle d-lg-none"
-          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          aria-expanded={mobileMenuOpen}
-          aria-label="Toggle navigation menu"
-        >
-          <i className={`bi ${mobileMenuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
-        </button>
+        {/* Mobile Controls: Language Switcher + Toggle Button */}
+        <div className="d-lg-none d-flex align-items-center gap-2">
+          <LanguageSwitcher />
+          <button
+            type="button"
+            className="mobile-nav-toggle"
+            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+            aria-expanded={mobileMenuOpen}
+            aria-label={t.nav.toggleMenuAria}
+          >
+            <i className={`bi ${mobileMenuOpen ? 'bi-x-lg' : 'bi-list'}`}></i>
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu Collapse */}
@@ -118,7 +124,7 @@ export const Navbar: React.FC = () => {
                 onClick={(e) => handleLinkClick(e, '#contact')}
                 className="nav-cta-btn w-100 justify-content-center"
               >
-                <span>Let's Talk</span>
+                <span>{t.nav.letsTalk}</span>
                 <i className="bi bi-arrow-up-right" aria-hidden="true"></i>
               </a>
             </div>

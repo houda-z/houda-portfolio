@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { portfolioData, type ProjectItem } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
+import type { ProjectItem } from '../data/portfolio';
 
 export const Projects: React.FC = () => {
   const [activeFilter, setActiveFilter] = useState<'all' | 'fullstack' | 'frontend' | 'ecommerce'>('all');
   const [imageErrors, setImageErrors] = useState<Record<string, boolean>>({});
+  const { portfolioData, t } = useLanguage();
   const { projects } = portfolioData;
 
   const handleImageError = (projectId: string) => {
@@ -21,9 +23,9 @@ export const Projects: React.FC = () => {
         <div className="section-header">
           <div className="d-flex flex-wrap align-items-end justify-content-between gap-3">
             <div>
-              <h2 className="section-title">Featured Projects</h2>
+              <h2 className="section-title">{t.projects.sectionTitle}</h2>
               <p className="section-subtitle">
-                A selection of full stack, frontend, and e-commerce applications built with React, TypeScript, and modern web architectures.
+                {t.projects.sectionSubtitle}
               </p>
             </div>
 
@@ -34,21 +36,21 @@ export const Projects: React.FC = () => {
                 className={`filter-btn ${activeFilter === 'all' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('all')}
               >
-                All Projects ({projects.length})
+                {t.projects.filterAll} ({projects.length})
               </button>
               <button
                 type="button"
                 className={`filter-btn ${activeFilter === 'fullstack' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('fullstack')}
               >
-                Full Stack
+                {t.projects.filterFullStack}
               </button>
               <button
                 type="button"
                 className={`filter-btn ${activeFilter === 'ecommerce' ? 'active' : ''}`}
                 onClick={() => setActiveFilter('ecommerce')}
               >
-                E-Commerce
+                {t.projects.filterEcommerce}
               </button>
             </div>
           </div>
@@ -62,7 +64,7 @@ export const Projects: React.FC = () => {
                 {/* Visual Media Header */}
                 <div className="project-media-wrap">
                   <span className="project-category-badge">
-                    {project.category}
+                    {t.projects.categories[project.category] || project.category}
                   </span>
 
                   {!imageErrors[project.id] ? (
@@ -109,16 +111,15 @@ export const Projects: React.FC = () => {
 
                   {/* Action Buttons */}
                   <div className="project-actions">
-
                     <a
                       href={project.githubUrl}
                       target="_blank"
                       rel="noopener noreferrer"
                       className="btn-project-secondary"
-                      title="Inspect project source code on GitHub (configurable placeholder)"
+                      title={t.projects.sourceCodeTitle}
                     >
                       <i className="bi bi-github"></i>
-                      <span>Source Code</span>
+                      <span>{t.projects.sourceCode}</span>
                     </a>
                   </div>
                 </div>
@@ -126,8 +127,6 @@ export const Projects: React.FC = () => {
             </div>
           ))}
         </div>
-
-
       </div>
     </section>
   );

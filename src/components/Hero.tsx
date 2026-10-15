@@ -1,9 +1,10 @@
 import React, { useState } from 'react';
-import { portfolioData } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
 import Pinwheel from './common/Pinwheel';
 
 export const Hero: React.FC = () => {
   const [imageError, setImageError] = useState(false);
+  const { portfolioData, t } = useLanguage();
   const { personal, heroPills } = portfolioData;
 
   const scrollToSection = (e: React.MouseEvent<HTMLAnchorElement>, id: string) => {
@@ -30,7 +31,7 @@ export const Hero: React.FC = () => {
         {/* Giant PORTFOLIO Title Container with Script Overlay */}
         <div className="hero-typography-container">
           <span className="hero-script-overlay">
-            professional
+            {t.hero.scriptOverlay}
           </span>
 
           <h1 className="hero-giant-title">
@@ -44,7 +45,7 @@ export const Hero: React.FC = () => {
               {!imageError ? (
                 <img
                   src={personal.profileImage}
-                  alt={`Portrait of ${personal.name}`}
+                  alt={t.hero.portraitAlt}
                   className="hero-portrait-img"
                   onError={() => setImageError(true)}
                   loading="eager"
@@ -77,7 +78,7 @@ export const Hero: React.FC = () => {
                 onClick={(e) => scrollToSection(e, 'projects')}
                 className="btn-navy"
               >
-                <span>View My Projects</span>
+                <span>{t.hero.viewProjects}</span>
                 <i className="bi bi-arrow-down-right btn-icon" aria-hidden="true"></i>
               </a>
 
@@ -87,7 +88,7 @@ export const Hero: React.FC = () => {
                 className="btn-navy-outline"
               >
                 <i className="bi bi-chat-dots me-1" aria-hidden="true"></i>
-                <span>Contact Me</span>
+                <span>{t.hero.contactMe}</span>
               </a>
             </div>
 

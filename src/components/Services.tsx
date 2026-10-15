@@ -1,7 +1,9 @@
 import React from 'react';
-import { portfolioData, type ServiceItem } from '../data/portfolio';
+import { useLanguage } from '../context/LanguageContext';
+import type { ServiceItem } from '../data/portfolio';
 
 export const Services: React.FC = () => {
+  const { portfolioData, t } = useLanguage();
   const { services } = portfolioData;
 
   const scrollToContact = (e: React.MouseEvent<HTMLAnchorElement>) => {
@@ -17,10 +19,9 @@ export const Services: React.FC = () => {
       <div className="container">
         {/* Section Header */}
         <div className="section-header text-center mx-auto" style={{ maxWidth: '720px' }}>
-
-          <h2 className="section-title">Development Services</h2>
+          <h2 className="section-title">{t.services.sectionTitle}</h2>
           <p className="section-subtitle mx-auto">
-            Focused, well-crafted web development solutions adhering to modern accessibility, responsiveness, and clean code standards.
+            {t.services.sectionSubtitle}
           </p>
         </div>
 
@@ -37,7 +38,7 @@ export const Services: React.FC = () => {
                 <p className="service-description">{service.description}</p>
 
                 <div className="pt-3 border-top mt-auto">
-                  <h4 className="h6 fw-bold text-dark mb-2">Deliverables include:</h4>
+                  <h4 className="h6 fw-bold text-dark mb-2">{t.services.deliverablesHeading}</h4>
                   <ul className="service-deliverables">
                     {service.deliverables.map((item, index) => (
                       <li key={index} className="service-deliverable-item">
@@ -59,7 +60,7 @@ export const Services: React.FC = () => {
             onClick={scrollToContact}
             className="btn-navy"
           >
-            <span>Have a project in mind? Let's discuss</span>
+            <span>{t.services.ctaBanner}</span>
             <i className="bi bi-chat-text btn-icon" aria-hidden="true"></i>
           </a>
         </div>

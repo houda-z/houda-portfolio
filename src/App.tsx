@@ -1,4 +1,5 @@
 import React from 'react';
+import { LanguageProvider, useLanguage } from './context/LanguageContext';
 import Navbar from './components/Navbar';
 import Hero from './components/Hero';
 import About from './components/About';
@@ -9,12 +10,14 @@ import Services from './components/Services';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 
-export const App: React.FC = () => {
+const PortfolioContent: React.FC = () => {
+  const { t } = useLanguage();
+
   return (
     <div className="app-container">
       {/* Accessibility Skip Link */}
       <a href="#main-content" className="skip-link">
-        Skip to main content
+        {t.skipLink}
       </a>
 
       {/* Main Top Navigation */}
@@ -34,6 +37,14 @@ export const App: React.FC = () => {
       {/* Site Footer */}
       <Footer />
     </div>
+  );
+};
+
+export const App: React.FC = () => {
+  return (
+    <LanguageProvider>
+      <PortfolioContent />
+    </LanguageProvider>
   );
 };
 
